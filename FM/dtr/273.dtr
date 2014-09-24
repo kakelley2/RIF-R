@@ -1,0 +1,4193 @@
+Experiment( SubjectCode)
+{
+  Context()
+  {
+    AssignmentGroup()
+    {
+      ExperimentName = "REDMO 25";
+      new Symbol = 1;
+      DataFileDestination = ".";
+      DataFileTrialFormat = "%SubjectCode%";
+      SkipBoundingBlockDisplays = 0;
+      RandomizeTrials = 0;
+      StopKey = de.pxlab.pxl.KeyCodes.ENTER_KEY;
+    }
+    Session()
+    {
+      Instruction()
+      {
+        Text = " ";
+      }
+    }
+    Block();
+    Trial:INST1( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = ["Thank you for your interest in our study! ", " ", "In this task, you will be presented with a series of letters on the screen. For each letter shown, you will need to respond by typing a designated two-finger sequence by using the eight orange markers on the keyboard in front of you. The two-finger sequence will be different for each letter shown. Before you begin, please rest your fingers on the eight orange markers on the keyboard in front of you.", " ", "It is very important that you try to enter each two-finger sequence correctly for each letter presented on the screen. This task tests how well you can learn each two-finger sequence, so it is very important that you pay attention and take this task seriously. After the task, you will be tested on how well you learned and remembered the two-finger sequences for the letters."];
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "continue";
+        LocationY = 300;
+        Width = 200;
+        Height = 60;
+      }
+    }
+    Trial:INST2( Picture.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "In the initial learning phase of the experiment, you will be presented with a letter along with an image of a left hand and a right hand (see below). Two fingers on either the left hand or the right hand will quickly light up in order to reveal the two-finger sequenced related to that letter. The first finger to light up in the sequence will be in yellow, and the second finger to light up in the sequence will be in blue. After the two-finger sequence is flashed on the screen, the image of the two hands will disappear. Once the two hands disappear from the screen, you will just see the letter. Now enter the two-finger sequence for that letter previously shown.";
+        LocationY = -200;
+        FontSize = 24;
+      }
+      Picture()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Directory = "./images";
+        LocationY = 80;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "continue";
+        LocationY = 300;
+        Width = 200;
+        Height = 60;
+      }
+    }
+    Trial:INST3( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = ["While performing this task, please try to keep your other fingers on their markers on the keyboard when they are not part of the two-finger sequence. It is important that you keep your eyes focused on the center of the screen where the individual letters appear. Please try to perceive the two-finger sequence presented below that letter from the corner of your eye, that is, do not let your eyes wander to the image of the two hands. Look at the letter and remember what the two-finger sequence is for that letter. It is quite difficult to learn the two-finger sequences. Therefore, please try your best to focus in order to do well.", " ", "Six of the twelve two-finger sequences involve two fingers on your left hand. These two-finger sequences are for the letters A, B, C, D, E, and F. The other six two-finger sequences involve your right hand. These two-finger sequences are for the letters U, V, W, X, Y, and Z. The two-finger sequence for any particular letter will always relate to the same hand for which it was originally shown. ", " ", "Once you click on Start!, you will have 10 seconds to rest your fingers on the buttons marked on the keyboard and to focus on the center of the screen. Then, the learning phase will begin."];
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "start!";
+        LocationY = 350;
+        Width = 120;
+        Height = 60;
+      }
+    }
+    Trial:INST4( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "This was a first pass with all the letters and corresponding two-finger movements. In the second part of the learning phase, you will be presented with the letters and two-finger sequences just as you were in the first part of the learning phase. Please note that the second part of this phase is longer than the first part. Each letter will be presented on the screen several times during this phase, so you will have the opportunity to learn the correct two-finger sequence for each letter.";
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "start!";
+        LocationY = 350;
+        Width = 120;
+        Height = 60;
+      }
+    }
+    Trial:INSTAB( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = ["The two-finger sequences for these letters shown consist of finger movements on the left hand. When you are presented with each letter, try your hardest to remember the appropriate two-finger sequence you learned for that letter and press those keys.", "When you click on Start!, you will have 10 seconds to rest your fingers back on the buttons marked on the keyboard. Then, the first letter will appear. Please leave your fingers on their markers when they are not part of the two-finger response for a letter shown."];
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "start!";
+        LocationY = 350;
+        Width = 120;
+        Height = 60;
+      }
+    }
+    Trial:IBILD( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "In the following task, you are asked to make an aesthetic evaluation of symbols, that is, an assessment of how attractive you think a symbol is. You will gradually unveil several Chinese characters by clicking on the gray boxes on the screen. A complete Chinese character will be revealed when you have clicked all of boxes. After the Chinese character has been fully uncovered, you will be asked to rate its aesthetic appeal at the bottom of the screen. Minus (-) signs indicate that you find the image unappealing. Plus (+) signs indicate that you find the image appealing. Please click which set of minus or plus signs most correctly matches your aesthetic evaluation.";
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "OK";
+        LocationY = 300;
+        Width = 200;
+        Height = 60;
+      }
+    }
+    Trial:INSTTEST( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = ["Please raise your hand now. The experimenter will give you further instructions about your next task. Do not proceed until the experimenter gives you the go-ahead.", " ", "A memory test will now take place. You will again be presented with letters from the learning phase. Please remember the corresponding two-finger sequence for that letter and enter it. ", "When you click on Start!, you will have 10 seconds to rest your fingers on the markers on the keyboard as before. Then, the first letter will appear as in the previous task. Please leave your fingers on the markers during the task if they are not required in the two-finger sequence for a particular letter. "];
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "start!";
+        LocationY = 350;
+        Width = 120;
+        Height = 60;
+      }
+    }
+    Trial:INSTRECALL( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = ["In the following test phase, you will be asked to type the two-finger sequences from the learning phase. There were 6 two-finger sequences for fingers on the left hand and 6 two-finger sequences for fingers on the right hand. For confirmation of a keystroke, a rhombus will appear on the screen. Hence, when the two-finger sequence has been typed, you will see two rhombuses on the screen. As soon as these have disappeared, you can enter the next two-finger sequence. If you cannot remember all the sequences, guess.", " ", "As soon as you click on Start!, you will have 10 seconds to rest your fingers on the markers of the keyboard as before. Then, please enter the two-finger sequences. Please continue to rest your other fingers on the markers when they are not used in a particular two-finger response."];
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "start!";
+        LocationY = 350;
+        Width = 120;
+        Height = 60;
+      }
+    }
+    Trial:INSTRECOG( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "A test now follows in which the images of the hands from the learning phase will be shown. As before, two fingers will light up to show a sequence. Please indicate whether or not the two-finger sequence is one that appeared during the learning phase. To indicate this, use the mouse to click on the appropriate box on the screen: old (if the two-finger sequence occurred in the learning phase) or new (if the two-finger sequence did not occur during the learning phase). ";
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "start!";
+        LocationY = 350;
+        Width = 120;
+        Height = 60;
+      }
+    }
+    Trial:INSTIMP( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "During the following part of the task, please type each of the letters appearing on the screen as quickly as you can.  Place your fingers as before on the marks and leave them there throughout. Enter each letter using the designated finger for that letter, e.g., the A key with the little finger of your left hand, the S key with the ring finger of your left hand, etc. ";
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = "start!";
+        LocationY = 350;
+        Width = 120;
+        Height = 60;
+      }
+    }
+    Trial:COUNT( Message.Text)
+    {
+      Message()
+      {
+        FontSize = 36;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:H( Message.Text, Picture.FileName)
+    {
+      Message()
+      {
+        LocationY = 0;
+        Color = White;
+      }
+      Picture()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 150;
+        LocationY = 260;
+        Directory = "./images";
+      }
+    }
+    Trial:H2( Picture.FileName)
+    {
+      Picture()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 150;
+        LocationY = 260;
+        Directory = "./images";
+      }
+    }
+    Trial:L1( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 69, 73, 79, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 82, 69, 73, 79, 80, 81, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:L1.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:L1.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:L2( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 82, 69, 73, 79, 80, 81, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 87, 69, 73, 79, 80, 81, 82, 85];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:L2.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:L2.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:L3( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 87, 69, 73, 79, 80, 81, 82, 85];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 81, 69, 73, 79, 80, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:L3.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:L3.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:L4( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 81, 69, 73, 79, 80, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 69, 73, 79, 80, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:L4.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:L4.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:L5( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 69, 73, 79, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 87, 69, 73, 79, 80, 81, 82, 85];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:L5.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:L5.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:L6( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 82, 69, 73, 79, 80, 81, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 81, 69, 73, 79, 80, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:L6.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:L6.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:R1( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 85, 69, 73, 79, 80, 81, 82, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 73, 69, 79, 80, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:R1.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:R1.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:R2( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 79, 69, 73, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 85, 69, 73, 79, 80, 81, 82, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:R2.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:R2.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:R3( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 80, 69, 73, 79, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 79, 69, 73, 80, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:R3.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:R3.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:R4( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 73, 69, 79, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 80, 69, 73, 79, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:R4.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:R4.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:R5( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 80, 69, 73, 79, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 85, 69, 73, 79, 80, 81, 82, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:R5.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:R5.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:R6( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 79, 69, 73, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 73, 69, 79, 80, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 50;
+      }
+      Feedback:T1()
+      {
+        ResponseParameter = "Trial:R6.Message:A.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        Visible = 1;
+      }
+      Feedback:T2()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        ResponseParameter = "Trial:R6.Message:B.ResponseCode";
+        CorrectCode = Symbol;
+        CorrectText = " ";
+        FalseText = "Error!";
+        Evaluation = de.pxlab.pxl.EvaluationCodes.COMPARE_CODE;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        Visible = 1;
+      }
+    }
+    Trial:RECOG( Picture.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      Picture()
+      {
+        Directory = "./images";
+        LocationY = 260;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = ["alt", "neu"];
+        LocationY = -50;
+        Width = 240;
+        Height = 60;
+      }
+    }
+    Trial:RECALL( Message:A.Text, Message:B.Text)
+    {
+      Message:A()
+      {
+        Color = White;
+        FontSize = 36;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+      }
+      Message:B()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        Color = White;
+        FontSize = 36;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+        LocationY = 100;
+      }
+    }
+    Trial:RECALLL( Message:A.Text, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Color = White;
+        FontSize = 36;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        LocationY = 100;
+      }
+      Message:B()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        FontSize = 36;
+        ResponseSet = [0, 69, 81, 82, 86, 87];
+      }
+    }
+    Trial:RECALLR( Message:A.Text, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Color = White;
+        FontSize = 36;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        LocationY = 100;
+      }
+      Message:B()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        FontSize = 36;
+        ResponseSet = [0, 73, 78, 79, 80, 85];
+      }
+    }
+    Trial:Ta( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 69, 73, 79, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 82, 69, 73, 79, 80, 81, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Tb( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 82, 69, 73, 79, 80, 81, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 87, 69, 73, 79, 80, 81, 82, 85];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Tc( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 87, 69, 73, 79, 80, 81, 82, 85];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 81, 69, 73, 79, 80, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Td( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 81, 69, 73, 79, 80, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 69, 73, 79, 80, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Te( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 69, 73, 79, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 87, 69, 73, 79, 80, 81, 82, 85];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Tf( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 82, 69, 73, 79, 80, 81, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 81, 69, 73, 79, 80, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Tu( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 85, 69, 73, 79, 80, 81, 82, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 73, 69, 79, 80, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Tv( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 79, 69, 73, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 85, 69, 73, 79, 80, 81, 82, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Tw( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 80, 69, 73, 79, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 79, 69, 73, 80, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Tx( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 73, 69, 79, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 80, 69, 73, 79, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Ty( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 80, 69, 73, 79, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 85, 69, 73, 79, 80, 81, 82, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:Tz( Message:A.Text, Message:A.ResponseCode, Message:B.Text, Message:B.ResponseCode, ResponseTime)
+    {
+      Message:A()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 79, 69, 73, 80, 81, 82, 85, 87];
+      }
+      Message:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.LIMITED_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Duration = 1000000;
+        Color = White;
+        ResponseSet = [0, 73, 69, 79, 80, 81, 82, 85, 87];
+      }
+      ClearScreen:B()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 500;
+      }
+    }
+    Trial:c0( ChoiceResponse.Selection, ResponseTime)
+    {
+      ChoiceResponse()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c1( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c2( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c3( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c4( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c5( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c6( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c7( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c8( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c9( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c10( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c11( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c12( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c13( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c14( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:c15( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e0( ChoiceResponse.Selection, ResponseTime)
+    {
+      ChoiceResponse()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e1( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e2( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e3( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e4( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e5( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e6( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e7( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e8( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e9( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e10( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e11( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e12( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e13( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e14( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:e15( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f0( ChoiceResponse.Selection, ResponseTime)
+    {
+      ChoiceResponse()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f1( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f2( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f3( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f4( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f5( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f6( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f7( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f8( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f9( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f10( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f11( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f12( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f13( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f14( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:f15( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i0( ChoiceResponse.Selection, ResponseTime)
+    {
+      ChoiceResponse()
+      {
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i1( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i2( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i3( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = 150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i4( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i5( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i6( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -150;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i7( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i8( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i9( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = -150;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i10( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i11( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 150;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i12( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i13( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = 50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i14( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = -50;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:i15( PictureMatrix.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      PictureMatrix()
+      {
+        Directory = "./images";
+        LocationX = 0;
+        LocationY = 0;
+        ReferencePoint = MIDDLE_CENTER;
+        VerticalGap = 0;
+        HorizontalGap = 0;
+        NumberOfColumns = 4;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = " ";
+        LocationY = 50;
+        LocationX = -50;
+        Width = 100;
+        Height = 100;
+      }
+    }
+    Trial:RATING( Picture:L.FileName, ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "How do you like this character? (- - - - - = not at all, + + + + + = very much)";
+        LocationY = 320;
+        FontSize = 24;
+        Overlay = de.pxlab.pxl.OverlayCodes.DISPLAY_LIST;
+      }
+      Picture:L()
+      {
+        LocationY = 0;
+        Directory = "./images";
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = ["-----", "----", "---", "--", "-", "+", "++", "+++", "++++", "+++++"];
+        LocationY = 400;
+        LocationX = 0;
+        Width = 1200;
+        Height = 30;
+      }
+    }
+    Trial:DEMO( Message.Text, TextInput.Text, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "Type in your answer, and then please press ENTER.";
+        LocationY = -200;
+        FontSize = 24;
+        Overlay = de.pxlab.pxl.OverlayCodes.DISPLAY_LIST;
+      }
+      Message()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        Timer = de.pxlab.pxl.TimerCodes.CLOCK_TIMER;
+        Duration = 0;
+        FontSize = 32;
+      }
+      TextInput()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.TRANSPARENT;
+        LocationY = 200;
+        FontSize = 32;
+        Timer = de.pxlab.pxl.TimerCodes.STOP_KEY_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+      }
+    }
+    Trial:RL( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "Please indicate whether you are right- or left-handed.";
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = ["right-handed", "left-handed"];
+        LocationY = 250;
+        Width = 460;
+        Height = 60;
+      }
+    }
+    Trial:KL( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "Can you play the piano?";
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = ["yes", "no"];
+        LocationY = 250;
+        Width = 460;
+        Height = 60;
+      }
+    }
+    Trial:TIPP( ChoiceResponse.Selection, ResponseTime)
+    {
+      TextParagraph()
+      {
+        Text = "Do you predominantly use the 10-finger system when typing on a keyboard?";
+        LocationY = -50;
+        FontSize = 24;
+      }
+      ChoiceResponse()
+      {
+        Overlay = de.pxlab.pxl.OverlayCodes.JOIN;
+        Timer = de.pxlab.pxl.TimerCodes.MOUSE_TRACKING_TIMER|de.pxlab.pxl.TimerCodes.START_RESPONSE_TIMER|de.pxlab.pxl.TimerCodes.STOP_RESPONSE_TIMER;
+        Choices = ["yes", "no"];
+        LocationY = 250;
+        Width = 460;
+        Height = 60;
+      }
+    }
+    // Session dependent assignments
+
+    AssignmentGroup()
+    {
+      SubjectCode = 273;
+      RemainingSessionGroup = 0;
+      RemainingSessionRuns = 0;
+      Date = "5/8/14 3:25:01 PM PDT";
+      PXLabVersion = "2.1.19";
+      PrimaryScreen.ColorDevice = de.pxlab.pxl.ColorDeviceTransformCodes.SONY_TRINITRON;
+      PrimaryScreen.ColorDeviceDACRange = 255;
+      PrimaryScreen.RedPrimary = [21.26, 0.621, 0.34];
+      PrimaryScreen.GreenPrimary = [71.52, 0.281, 0.606];
+      PrimaryScreen.BluePrimary = [7.22, 0.152, 0.067];
+      PrimaryScreen.RedGamma = [2.4, 1];
+      PrimaryScreen.GreenGamma = [2.4, 1];
+      PrimaryScreen.BlueGamma = [2.4, 1];
+      SecondaryScreen.ColorDevice = de.pxlab.pxl.ColorDeviceTransformCodes.SONY_TRINITRON;
+      SecondaryScreen.ColorDeviceDACRange = 255;
+      SecondaryScreen.RedPrimary = [21.26, 0.621, 0.34];
+      SecondaryScreen.GreenPrimary = [71.52, 0.281, 0.606];
+      SecondaryScreen.BluePrimary = [7.22, 0.152, 0.067];
+      SecondaryScreen.RedGamma = [2.4, 1];
+      SecondaryScreen.GreenGamma = [2.4, 1];
+      SecondaryScreen.BlueGamma = [2.4, 1];
+      DeviceWhitePoint = [100, 0.3065, 0.3468];
+      CIEWhitePoint = 0;
+    }
+  }
+  Factors()
+  {
+    IndependentFactor( Symbol)
+    {
+      FactorLevel( 1);
+      FactorLevel( 2);
+    }
+    DependentFactor( ResponseTime);
+  }
+  Procedure()
+  {
+    Session()
+    {
+      Block()
+      {
+        Trial:INST1( 0, 49094.924);
+        Trial:INST2( "Hand.jpg", 0, 45278.334);
+        Trial:INST3( 0, 66909.671);
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 11148.604);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 1443.178);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 1103.704);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 670.134);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 2233.305);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 2, "b", 1, 2900.826);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 1210.368);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 1299.842);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 935.434);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 1372.754);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 1472.049);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 1265.242);
+      }
+      Block()
+      {
+        Trial:INST4( 0, 19526.78);
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 1214.648);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 911.788);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 1424.533);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 1143.086);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 1436.488);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 850.288);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 831.77);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 578.732);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 936.197);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 781.896);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 1108.82);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 1466.983);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 684.594);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 486.653);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 1250.503);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 1104.175);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 978.843);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 1348.005);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 281.909);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 1153.467);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 992.616);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 1531.528);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 976.896);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 801.331);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 877.514);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 769.027);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 788.125);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 1295.353);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 852.375);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 648.193);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 861.624);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 987.828);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 817.717);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 1389.205);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 750.112);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 959.914);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 834.569);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 982.87);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 787.007);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 654.895);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 790.459);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 752.613);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 799.689);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 730.23);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 1426.8);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 954.274);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 857.958);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 1150.755);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 1245.281);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 1241.32);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 1067.05);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 1332.42);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 727.975);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 567.092);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 724.512);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 642.236);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 635.031);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 709.834);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 701.157);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 1274.507);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 646.723);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 550.014);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 807.511);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 800.901);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 559.952);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 968.543);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 489.169);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 529.519);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 582.951);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 343.148);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 699.752);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 3, 703.254);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 643.429);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 1112.485);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 539.622);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 710.765);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 1418.663);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 932.982);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 686.391);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 640.08);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 607.185);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 812.158);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 618.333);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 1003.222);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 879.873);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 719.714);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 726.049);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 432.083);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 592.334);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 718.258);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 461.818);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 479.809);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 753.3);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 717.708);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 853.216);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 638.251);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 559.241);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 677.648);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 1111.411);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 450.63);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 871.732);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 850.154);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 641.236);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 433.099);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 975.06);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 495.327);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 980.321);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 595.524);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 639.112);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 618.393);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 398.722);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 422.946);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 480.973);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 740.398);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 597.018);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 587.019);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 814.251);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 632.66);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 684.616);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 732.547);
+      }
+      Block()
+      {
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "Hand.jpg");
+        Trial:H( "a", "links_Mitte.jpg");
+        Trial:H( "a", "links_Zeige2.jpg");
+        Trial:L1( "a", 1, "a", 1, 696.405);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "Hand.jpg");
+        Trial:H( "u", "rechts_Zeige.jpg");
+        Trial:H( "u", "rechts_Mitte2.jpg");
+        Trial:R1( "u", 1, "u", 1, 679.689);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "Hand.jpg");
+        Trial:H( "f", "links_Zeige.jpg");
+        Trial:H( "f", "links_klein2.jpg");
+        Trial:L6( "f", 1, "f", 1, 688.445);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "Hand.jpg");
+        Trial:H( "v", "rechts_Ring.jpg");
+        Trial:H( "v", "rechts_Zeige2.jpg");
+        Trial:R2( "v", 1, "v", 1, 736.135);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "Hand.jpg");
+        Trial:H( "z", "rechts_Ring.jpg");
+        Trial:H( "z", "rechts_Mitte2.jpg");
+        Trial:R6( "z", 1, "z", 1, 773.694);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "Hand.jpg");
+        Trial:H( "c", "links_Ring.jpg");
+        Trial:H( "c", "links_klein2.jpg");
+        Trial:L3( "c", 1, "c", 1, 815.126);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "Hand.jpg");
+        Trial:H( "y", "rechts_klein.jpg");
+        Trial:H( "y", "rechts_Zeige2.jpg");
+        Trial:R5( "y", 1, "y", 1, 651.111);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "Hand.jpg");
+        Trial:H( "w", "rechts_klein.jpg");
+        Trial:H( "w", "rechts_Ring2.jpg");
+        Trial:R3( "w", 1, "w", 1, 525.494);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "Hand.jpg");
+        Trial:H( "d", "links_klein.jpg");
+        Trial:H( "d", "links_Mitte2.jpg");
+        Trial:L4( "d", 1, "d", 1, 619.072);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "Hand.jpg");
+        Trial:H( "e", "links_Mitte.jpg");
+        Trial:H( "e", "links_Ring2.jpg");
+        Trial:L5( "e", 1, "e", 1, 648.858);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "Hand.jpg");
+        Trial:H( "b", "links_Zeige.jpg");
+        Trial:H( "b", "links_Ring2.jpg");
+        Trial:L2( "b", 1, "b", 1, 915.053);
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "Hand.jpg");
+        Trial:H( "x", "rechts_Mitte.jpg");
+        Trial:H( "x", "rechts_klein2.jpg");
+        Trial:R4( "x", 1, "x", 1, 641.843);
+      }
+      Block()
+      {
+        Trial:INSTAB( 0, 12161.379);
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+      }
+      Block()
+      {
+        Trial:Tb( "b", 1, "b", 1, 1665.786);
+        Trial:Tc( "c", 1, "c", 1, 1351.705);
+        Trial:Ta( "a", 1, "a", 1, 1266.284);
+        Trial:Tb( "b", 1, "b", 1, 1278.215);
+        Trial:Tc( "c", 1, "c", 1, 956.219);
+        Trial:Ta( "a", 1, "a", 1, 1757.272);
+        Trial:Tb( "b", 1, "b", 1, 1493.796);
+        Trial:Ta( "a", 1, "a", 1, 1580.959);
+        Trial:Tc( "c", 1, "c", 1, 964.661);
+        Trial:Tb( "b", 1, "b", 1, 1165.238);
+        Trial:Tc( "c", 1, "c", 1, 971.997);
+        Trial:Ta( "a", 1, "a", 1, 1045.7);
+        Trial:Tc( "c", 1, "c", 1, 1340.127);
+        Trial:Tb( "b", 1, "b", 1, 1260.63);
+        Trial:Ta( "a", 1, "a", 1, 1106.166);
+        Trial:Tb( "b", 1, "b", 1, 1156.069);
+        Trial:Tc( "c", 1, "c", 1, 909.117);
+        Trial:Ta( "a", 1, "a", 1, 1341.299);
+        Trial:Tb( "b", 1, "b", 1, 828.348);
+        Trial:Tc( "c", 1, "c", 1, 724.02);
+        Trial:Ta( "a", 1, "a", 1, 836.738);
+        Trial:Tb( "b", 1, "b", 1, 956.118);
+        Trial:Ta( "a", 1, "a", 1, 1132.01);
+        Trial:Tc( "c", 1, "c", 1, 941.099);
+        Trial:Tb( "b", 1, "b", 1, 922.914);
+        Trial:Tc( "c", 1, "c", 1, 1332.391);
+        Trial:Ta( "a", 1, "a", 1, 1029.667);
+        Trial:Tc( "c", 1, "c", 1, 835.2);
+        Trial:Tb( "b", 1, "b", 1, 1228.403);
+        Trial:Ta( "a", 1, "a", 1, 1844.177);
+      }
+      Block()
+      {
+        Trial:INSTTEST( 0, 581628.649);
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( "*");
+        Trial:COUNT( " ");
+        Trial:COUNT( " ");
+      }
+      Block()
+      {
+        Trial:Tx( "x", 1, "x", 1, 1575.545);
+        Trial:Td( "d", 1, "d", 1, 1560.646);
+        Trial:Te( "e", 1, "e", 1, 2158.699);
+        Trial:Ty( "y", 1, "y", 1, 1897.539);
+        Trial:Tz( "z", 1, "z", 1, 1472.07);
+        Trial:Tf( "f", 1, "f", 1, 1077.888);
+        Trial:Tu( "u", 1, "u", 1, 1384.294);
+        Trial:Ta( "a", 1, "a", 1, 927.429);
+        Trial:Tv( "v", 1, "v", 1, 3326.044);
+        Trial:Tb( "b", 1, "b", 1, 1192.122);
+        Trial:Tc( "c", 1, "c", 1, 1341.631);
+        Trial:Tw( "w", 1, "w", 1, 1309.566);
+      }
+      Block()
+      {
+        Trial:DEMO( "What is your major?", "Biology", 6126.143);
+        Trial:DEMO( "How old are you?", 19, 3316.182);
+        Trial:RL( 0, 3644.139);
+        Trial:KL( 1, 2405.068);
+        Trial:TIPP( 0, 5198.356);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+stimulus	duration
+Shoelace	60
+Pencil	60
+Needle	60
+Ball	60
+Book	60
+Napkin	60
+Bowl	60
+flower	60
+Jar	60
